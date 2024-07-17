@@ -25,6 +25,26 @@ function addEntry() {
     <input type="text" id="${entryDropdown.value}-${entryNumber}-name" placeholder="Name" />
     <label for="${entryDropdown.value}-${entryNumber}-calories">Entry ${entryNumber} Calories</label>
     <input type="number" min="0" placeholder="Calories" id="${entryDropdown.value}-${entryNumber}-calories" />`;
-  targetInputContainer.insertAdjacentHTML();
+  targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
 }
+
+function getCaloriesFromInputs(list) {
+  let calories = 0;
+
+  for (const item of list) {
+    const currVal = cleanInputString(item.value);
+    const invalidInputMatch = isInvalidInput(currVal);
+  }
+}
+function getCaloriesFromInputs(list) {
+  let calories = 0;
+
+  for (const item of list) {
+    const currVal = cleanInputString(item.value);
+    const invalidInputMatch = isInvalidInput(currVal);
+  }
+  if (invalidInputMatch) {
+  }
+}
+
 addEntryButton.addEventListener("click", addEntry);
